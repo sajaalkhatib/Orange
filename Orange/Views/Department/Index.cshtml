@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Orange.Models.Department>
+
+<h1>Department List</h1>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Department Name</th>
+            <th>Location</th>
+            <th>Manager</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var department in Model)
+        {
+            <tr>
+                <td>@department.DepartmentName</td>
+                <td>@department.Location</td>
+                <td>@department.Manager</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create", "Department")" class="btn btn-primary">Create New Department</a>
